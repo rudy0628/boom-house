@@ -58,7 +58,7 @@ const HouseMap = ({
 				<MarkerF
 					position={geocoding.latAndLng}
 					icon={{
-						url: '../../public/icon/house-pin-icon.png',
+						url: './icon/house-pin-icon.png',
 						scaledSize: new window.google.maps.Size(50, 50),
 					}}
 					onClick={() => {

@@ -29,19 +29,21 @@ const theme = extendTheme({
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	<Auth0Provider
-		domain={domain!}
-		clientId={clientId!}
-		authorizationParams={{
-			redirect_uri: window.location.origin,
-			ui_locales: 'zh-TW',
-			audience: 'https://dev-7qy67xolh5cn44qw.us.auth0.com/api/v2/',
-		}}
-	>
-		<BrowserRouter>
-			<ChakraProvider theme={theme}>
-				<App />
-			</ChakraProvider>
-		</BrowserRouter>
-	</Auth0Provider>
+	<React.StrictMode>
+		<Auth0Provider
+			domain={domain!}
+			clientId={clientId!}
+			authorizationParams={{
+				redirect_uri: window.location.origin,
+				ui_locales: 'zh-TW',
+				audience: 'https://dev-7qy67xolh5cn44qw.us.auth0.com/api/v2/',
+			}}
+		>
+			<BrowserRouter>
+				<ChakraProvider theme={theme}>
+					<App />
+				</ChakraProvider>
+			</BrowserRouter>
+		</Auth0Provider>
+	</React.StrictMode>
 );
