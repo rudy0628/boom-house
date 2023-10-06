@@ -12,9 +12,6 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 @Configuration
 public class MyDataRestConfig implements RepositoryRestConfigurer {
-    // Allow client side to use the api, solve the CORS problem
-    private String theAllowedOrigins = "https://boom-house.vercel.app";
-
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
         // for general actions
@@ -36,7 +33,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         disableHttpMethods(Report.class, config, allActions);
 
         // Configure CORS Mapping
-        cors.addMapping(config.getBasePath() + "/**").allowedOrigins(theAllowedOrigins);
+        cors.addMapping(config.getBasePath() + "/**").allowedOrigins("https://boom-house.vercel.app", "http://127.0.0.1:5173");
     }
 
     // disable the http method: POST, PATCH, PUT, DELETE
