@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-@CrossOrigin("http://127.0.0.1:5173")
+@CrossOrigin("https://boom-house.vercel.app")
 @RestController
 @RequestMapping("/api/reviews")
 public class ReviewController {

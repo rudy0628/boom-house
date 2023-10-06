@@ -38,7 +38,7 @@ const FooterLink = () => {
 					<Avatar
 						size="xl"
 						name="boom house logo"
-						src="../../public/icon/boom_house-logos_transparent.png"
+						src="./icon/boom_house-logos_transparent.png"
 					/>
 					<Text mt={4} color="gray.600" fontSize="lg">
 						全台灣最大的租屋地雷經驗分享平台

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@CrossOrigin("http://127.0.0.1:5173")
+@CrossOrigin("https://boom-house.vercel.app")
 @RestController
 @RequestMapping("/api/reports")
 public class ReportController {

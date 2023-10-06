@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@CrossOrigin("http://127.0.0.1:5173")
+@CrossOrigin("https://boom-house.vercel.app")
 @RestController
 @RequestMapping("/api/houses")
 public class HouseController {
