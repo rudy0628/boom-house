@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 
 // google map
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
 
 // chakra
 import { Box, Spinner } from '@chakra-ui/react';
@@ -40,8 +40,8 @@ const HouseMap = ({
 				lat: position.coords.latitude,
 				lng: position.coords.longitude,
 			});
-			map.setZoom(15);
 		});
+		map.setZoom(15);
 	}, []);
 
 	return isLoaded ? (
@@ -55,7 +55,7 @@ const HouseMap = ({
 			onLoad={onLoad}
 		>
 			{geocodings.map(geocoding => (
-				<Marker
+				<MarkerF
 					position={geocoding.latAndLng}
 					icon={{
 						url: '../../public/icon/house-pin-icon.png',
