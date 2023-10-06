@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/utils/ProtectedRoute';
 
 import { useAuth0 } from '@auth0/auth0-react';
@@ -16,6 +16,7 @@ import HouseMapPage from './page/HouseMapPage';
 import ReportsPage from './page/admin/ReportsPage';
 import UserHousesPage from './page/UserHousesPage';
 import PrivacyPage from './page/PrivacyPage';
+import PageNotFound from './page/PageNotFound';
 
 function App() {
 	const { isAuthenticated } = useAuth0();
@@ -74,6 +75,10 @@ function App() {
 							</ProtectedRoute>
 						}
 					/>
+
+					{/* page not found */}
+					<Route path="/404" element={<PageNotFound />} />
+					<Route path="*" element={<Navigate to="/404" />} />
 				</Routes>
 			</Box>
 

@@ -183,6 +183,10 @@ const HousePage = () => {
 
 			const houseResponse = await fetch(url);
 
+			if (!houseResponse.ok) {
+				navigate('/404');
+			}
+
 			const houseResponseJson = await houseResponse.json();
 
 			const fetchHouse: any = {};

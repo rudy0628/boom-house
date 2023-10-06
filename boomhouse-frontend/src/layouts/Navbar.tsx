@@ -134,7 +134,7 @@ const Navbar = () => {
 					{/* Home */}
 					<ChakraLink as={ReactRouterLink} to="/">
 						<Image
-							src="./icon/boom_house-logos_transparent.png"
+							src={`${window.location.origin}/icon/boom_house-logos_transparent.png`}
 							alt="boom house"
 							boxSize="80px"
 						/>
@@ -252,7 +252,10 @@ const Navbar = () => {
 					<DrawerContent>
 						<DrawerCloseButton />
 						<DrawerHeader justifyContent="center">
-							<Avatar src="./icon/boom_house-logos_transparent.png" size="xl" />
+							<Avatar
+								src={`${window.location.origin}/icon/boom_house-logos_transparent.png`}
+								size="xl"
+							/>
 						</DrawerHeader>
 						<DrawerBody display="flex" flexDirection="column" gap={2}>
 							{/* nav links */}
