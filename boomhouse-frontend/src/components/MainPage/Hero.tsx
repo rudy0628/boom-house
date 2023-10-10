@@ -8,6 +8,8 @@ import {
 	Image,
 } from '@chakra-ui/react';
 
+import { Link } from 'react-router-dom';
+
 // react icons
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
@@ -90,6 +92,8 @@ const Hero = () => {
 						_hover={{ bgColor: 'primary.600' }}
 						color="white"
 						width={{ base: '100%', sm: 'auto' }}
+						as={Link}
+						to="/houses/add"
 					>
 						開始分享！
 					</Button>
@@ -99,6 +103,8 @@ const Hero = () => {
 						color="gray.600"
 						_hover={{ color: 'gray.700', bgColor: 'gray.100' }}
 						width={{ base: '100%', sm: 'auto' }}
+						as={Link}
+						to="/houses"
 					>
 						查看所有地雷屋
 					</Button>
