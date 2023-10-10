@@ -220,6 +220,10 @@ const AddOrUpdateHousePage = ({ formType }: { formType: string }) => {
 
 				const response = await fetch(url);
 
+				if (!response.ok) {
+					navigate('/404');
+				}
+
 				const responseJson = await response.json();
 
 				if (user.email !== responseJson.userEmail) {
