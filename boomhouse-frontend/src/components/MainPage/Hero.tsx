@@ -36,6 +36,8 @@ const Hero = () => {
 					gap={2}
 					fontSize="md"
 					cursor="pointer"
+					as={Link}
+					to="/houses"
 				>
 					<Badge
 						bgColor="pink.500"
